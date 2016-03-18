@@ -11,12 +11,37 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="project.o.charger.MainActivity"
     tools:showIn="@layout/activity_main">
-
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="S T A R T"
-        android:id="@+id/button"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/planners_list_view"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@drawable/ic_add_white_24dp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+        </FrameLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>
